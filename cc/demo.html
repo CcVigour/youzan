@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>AOS</title> 
+<link rel="stylesheet" href="./aos.css" />
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .mask{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        transform: translateZ(0);
+        z-index: -1;
+        background-image: url(http://michalsnik.github.io/aos/img/bg.jpg);
+    }
+    .mask::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: #3F51B5;
+        opacity: 0.8;
+    }
+    .head{
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        left: 0;
+        transform: translate(0, -50%);
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    .logo{
+        font-size: 60px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    .text{
+        color: #fff;
+    }
+    .demo{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 100%;
+        padding: 0 100px;
+        box-sizing: border-box;
+    }
+    .box{
+        background: #FFF;
+        border-radius: 2px;
+        z-index: 200;
+        width: 350px;
+        height: 200px;
+        margin: 100px 0;
+        padding: 10px;
+        box-sizing: border-box;
+        display: block;
+        clear: both;
+    }
+    .con{
+        width: 100%;
+        height: 100%;
+        background: #202746;
+        color: #979db4;
+        text-align: center;
+        line-height: 200px;
+    }
+    .lt{
+        float: left;
+
+    }
+    .rt{
+        float: right;        
+    }
+    .mao{
+        padding: 10px;
+        
+        position: fixed;
+        left: 10px;
+        top: 50px;
+        background: #01BFFF;
+    }
+    .mao-rt{
+        padding: 10px;
+
+        position: fixed;
+        top: 100px;
+        right: 10px;
+        background: #fff;
+    }
+</style>
+</head>
+<body>
+    <div class="mask"></div>
+    <div class="head">  
+        <h1 class="logo" data-aos="zoom-in-down" data-aos-duration="1500">AOS</h1>
+        <h2 class="text" data-aos="zoom-in-up" data-aos-duration="2000">Animate On Scroll Lirary</h2>
+    </div>
+
+    <!-- 锚点 -->
+    <div class="mao"
+     data-aos-anchor=".xi" 
+     data-aos-anchor-placement="top-center"
+     data-aos="fade-left" 
+    >当 嘻嘻嘻 到达到window的中央时</div>
+
+    <div class="mao-rt"
+    data-aos-anchor=".xi" 
+    data-aos-anchor-placement="top-bottom"
+    data-aos="fade-right" 
+   >当 嘻嘻嘻 出现时</div>
+
+
+   <!-- demo -->
+    <div class="demo">
+
+        <!-- fade效果 -->
+        <div class="box lt la" 
+            data-aos="fade-up-right" 
+            data-aos-offset="50" 
+        >
+            <div class="con">啦啦啦</div>
+        </div>
+
+
+        <div class="box rt ha"
+            data-aos="fade-up-left"
+            data-aos-easing="ease-in-sine" 
+        >
+            <div class="con">哈哈哈</div>
+        </div>
+
+
+
+        
+        <!-- demo 锚点 -->
+        <div class="box lt xi" >
+            <div class="con">嘻嘻嘻</div>
+        </div>
+
+
+
+
+        <div class="box rt hei" data-aos="flip-left">
+            <div class="con">嘿嘿嘿</div>
+        </div>
+
+
+
+        <div class="box lt he" data-aos="zoom-in-up">
+            <div class="con">呵呵呵</div>
+        </div>
+        <div class="box rt di" data-aos="zoom-in-right">
+            <div class="con">滴滴滴</div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="./aos.js"></script>
+    <script>
+        AOS.init({
+            duration:1000,
+        });
+    </script>
+</body>
+</html>
