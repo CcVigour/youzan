@@ -1,0 +1,14 @@
+
+
+
+  .sider-container{
+    -ms-overflow-style: none;
+    overflow: -moz-hidden-unscrollable;  
+    &::-webkit-scrollbar{
+      width: 0 !important;
+  }
+    // .ant-layout-sider-children{
+    //     background: #9137F3;
+        
+    // }
+  }
