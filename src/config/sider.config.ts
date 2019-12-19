@@ -113,9 +113,14 @@ const SiderConfig: SiderConfigInterface[] = [
         path: "/customer/operat"
       },
       {
-        id: "customer-add",
-        title: "添加客户",
-        path: "/customer/add"
+        id: "customer-vipcard",
+        title: "会员卡",
+        path: "/customer/vipcard"
+      },
+      {
+        id: "customer-vipManager",
+        title: "会员管理",
+        path: "/customer/vipManager"
       }
     ]
   },

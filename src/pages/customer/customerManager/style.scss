@@ -1,0 +1,42 @@
+.customerManager {
+    // padding:  0 100px;
+    .addBtn {
+        margin-right: 25px;
+    }
+
+    .selectList {
+        width: 100%;
+        padding: 10px 25px;
+        margin-top: 25px;
+        background: #ddd;
+
+        .select {
+            display: flex;
+            .selOne,
+            .selTwo,
+            .selThree {
+                width: 25%;
+                label {
+                    display: flex;
+                    margin: 10px;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    .ant-input,
+                    .ant-select {
+                        width: 50%;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .sel{
+            font-size:12px;
+            margin:10px 25px 10px 100px;
+        }
+        .clean{
+            font-size:12px;
+            color: blue;
+        }
+    }
+}
