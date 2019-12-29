@@ -4,7 +4,6 @@ const { Option } = Select;
 
 interface State {
     buyCount? :string,
-    sex? : '男'|'女'|'全部',
     phone? : string
 }
 
@@ -14,7 +13,6 @@ export default class SelectOne extends PureComponent<{clean:boolean}, State> {
         super(props);
         this.state = {
             buyCount: '全部',
-            sex:'全部',
             phone:undefined
         }
     }
@@ -25,13 +23,7 @@ export default class SelectOne extends PureComponent<{clean:boolean}, State> {
             buyCount:data
         })
     }
-    //性别改变
-    sexChange(data:any){
-        this.setState({
-            ...this.state,
-            sex:data
-        })
-    }
+   
     //手机号码改变
     phoneChange(ev:React.ChangeEvent<HTMLInputElement>){
         this.setState({
@@ -50,7 +42,7 @@ export default class SelectOne extends PureComponent<{clean:boolean}, State> {
                 ...this.state,
                 phone:'',
                 buyCount: '全部',
-                sex:'全部',
+               
             })
         }
     }
@@ -65,13 +57,6 @@ export default class SelectOne extends PureComponent<{clean:boolean}, State> {
                     <Option value="26~50">26~50</Option>
                     <Option value="51~100">51~100</Option>
                     <Option value="100+">100+</Option>
-                    <Option value="全部">全部</Option>
-                </Select></label>
-            <label>
-                <em>性别：</em>
-                <Select defaultValue={this.state.sex} value={this.state.sex} onChange={this.sexChange.bind(this)}>
-                    <Option value="男">男</Option>
-                    <Option value="女">女</Option>
                     <Option value="全部">全部</Option>
                 </Select>
             </label>

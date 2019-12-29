@@ -8,6 +8,7 @@ import {useSelector} from 'react-redux'
 import footLogo from "./assets/logov2.png";
 import Login from './pages/login';
 
+import Loading from './pages/common/loading'
 
 const LayOut: React.FC<{}> = function LayOut() {
   const role = useSelector(state=>(state as any).get('root').get('userInfo').get('role'));
@@ -20,7 +21,7 @@ const LayOut: React.FC<{}> = function LayOut() {
         <Header />
         <div className="app-main-content buWamQ">
           {/* 懒加载 */}
-          <Suspense fallback={<div>loading</div>}>
+          <Suspense fallback={<Loading/>}>
             {renderRoutes(routes,role)}
            
           </Suspense>

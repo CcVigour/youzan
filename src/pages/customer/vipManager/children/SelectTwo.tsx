@@ -1,24 +1,23 @@
 import React, { PureComponent } from 'react'
-import { Input, Select } from 'antd';
-const { Option } = Select;
+import { Input } from 'antd';
 
 interface State {
     wechatName?: string,
-    identity?: string
+    vipCard?: string
 }
 export default class SelectTwo extends PureComponent<{ clean: boolean }, State> {
     constructor(props: any) {
         super(props);
         this.state = {
             wechatName: undefined,
-            identity: '全部'
+            vipCard: ''
         }
     }
-    //客户身份改变
-    identityChange(data: any) {
+    //会员卡号改变
+    vipCardChange(ev: React.ChangeEvent<HTMLInputElement>) {
         this.setState({
             ...this.state,
-            identity: data
+            vipCard: ev.target.value
         })
     }
     //微信昵称改变
@@ -38,7 +37,7 @@ export default class SelectTwo extends PureComponent<{ clean: boolean }, State> 
             this.setState({
                 ...this.state,
                 wechatName: '',
-                identity: '全部'
+                vipCard: ''
             })
         }
     }
@@ -51,16 +50,11 @@ export default class SelectTwo extends PureComponent<{ clean: boolean }, State> 
                         onChange={this.wechatNameChange.bind(this)} />
                 </label>
                 <label>
-                    <em>客户身份：</em>
-                    <Select defaultValue="全部"
-                        value={this.state.identity}
-                        onChange={this.identityChange.bind(this)}>
-                        <Option value="会员">会员</Option>
-                        <Option value="非会员">非会员</Option>
-                        <Option value="禁止购买名单">禁止购买名单</Option>
-                        <Option value="普通会员">普通会员</Option>
-                        <Option value="全部">全部</Option>
-                    </Select>
+                    <em>会员卡：</em>
+                    <Input 
+                        value={this.state.vipCard}
+                        onChange={this.vipCardChange.bind(this)}>
+                    </Input>
                 </label>
             </div>
         )

@@ -1,12 +1,32 @@
 import React from 'react'
 
+import { Tabs } from 'antd';
 
-const CustomerAdd: React.FC<{}> = function CustomerAdd(){
+import './index.scss'
+
+import AddRecord from './children/addRecord/addRecord'
+
+const { TabPane } = Tabs;
+
+function callback(key:any) {
+  console.log(key);
+}
+const VipCard: React.FC<{}> = function VipCard() {
   return (
-    <div>
-      <h1>新增客户</h1>
+    <div className="vipCard">
+      <Tabs defaultActiveKey="1" onChange={callback}>
+        <TabPane tab="会员卡管理" key="1">
+            <AddRecord/>
+        </TabPane>
+        <TabPane tab="领卡记录" key="2">
+            领卡记录
+        </TabPane>
+        <TabPane tab="退卡记录" key="3">
+            退卡记录
+        </TabPane>
+      </Tabs>
     </div>
   )
 }
 
-export default CustomerAdd;
+export default VipCard;

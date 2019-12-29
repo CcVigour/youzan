@@ -4,6 +4,8 @@ import './style.scss'
 import SelectOne from './children/SelectOne'
 import SelectTwo from './children/SelectTwo'
 import SelectThree from './children/SelectThree'
+import CustomerList from './children/customerList'
+
 const CustomerManager: React.FC<{}> = function CustomerManager() {
   //清除
   const [clean , setClean] = useState<boolean>(false);
@@ -44,6 +46,8 @@ const CustomerManager: React.FC<{}> = function CustomerManager() {
           }}
         >清空筛选条件</span>
       </div>
+
+        <CustomerList/>
 
     </div>
   )

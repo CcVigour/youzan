@@ -1,7 +1,12 @@
 import React, { PureComponent } from 'react'
 import { Input, Select } from 'antd';
 const { Option } = Select;
-export default class SelectThree extends PureComponent<{clean:boolean},{}> {
+
+interface State {
+    cardNumber?: string,
+    integral?: string
+}
+export default class SelectThree extends PureComponent<{clean:boolean},State> {
     constructor (props:any){
         super(props);
         this.state = {
@@ -27,12 +32,24 @@ export default class SelectThree extends PureComponent<{clean:boolean},{}> {
      getSelThree (){
         return this.state;
     }
+    componentDidUpdate() {
+        //如果是清除状态
+        if (this.props.clean) {
+            this.setState({
+                ...this.state,
+                cardNumber:'',
+                integral:'全部'
+            })
+        }
+    }
     render() {
         return (
             <div className="selThree">
-                <label>会员卡号：<Input onChange={this.cardChange.bind(this)}/></label>
+                <label>会员卡号：<Input value={this.state.cardNumber} onChange={this.cardChange.bind(this)}/></label>
                 <label>积分：
-                <Select defaultValue="全部" onChange={this.integralChange.bind(this)}>
+                <Select defaultValue="全部" 
+                    value={this.state.integral}
+                    onChange={this.integralChange.bind(this)}>
                         <Option value="10~20">10~20</Option>
                         <Option value="21~50">21~50</Option>
                         <Option value="51~70">51~70</Option>
