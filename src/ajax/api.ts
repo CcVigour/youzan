@@ -23,10 +23,6 @@ enum API {
 
   ORDER_LIST = "api/order/list",
 
-  ORDER_REFUND = 'api/order/refund',
-
-  ORDER_DETAIL = 'api/order/detail',
-
   // 客户管理
   // 参数：type(add select)
   CUSTOMER_MANAGER = 'api/customer/manager',

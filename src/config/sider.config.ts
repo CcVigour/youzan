@@ -90,11 +90,6 @@ const SiderConfig: SiderConfigInterface[] = [
         title: "所有订单",
         path: "/order/all"
       },
-      {
-        id: "order-detail",
-        title: "订单详情",
-        path: "/order/detail/:id"
-      }
     ]
   },
   {

@@ -1,0 +1,44 @@
+.classify{
+  background-color: #f7f8fa;
+  padding: 16px;
+  margin-bottom: 16px;
+  .order-num{
+    height: 48px;
+    .ant-select {
+      margin-right:20px;
+    }
+  }
+  .time{
+    height: 48px;
+    span:nth-of-type(1){
+      margin-right: 15px;
+    }
+    span:nth-of-type(2){
+      margin-left: 15px;
+    }
+
+  }
+  .three{
+    height: 48px;
+    display: flex;
+    .name{
+      width: 270px;
+    }
+    .type{
+      margin: 0 50px;
+    }
+  }
+  .four{
+    height: 48px;
+    display: flex;
+    .pay{
+      margin: 0 50px;
+    }
+  }
+  .btn{
+    display: flex;
+    width: 28%;
+    justify-content: space-between;
+    padding: 0 100px;
+  }
+}

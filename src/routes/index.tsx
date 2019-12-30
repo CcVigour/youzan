@@ -87,7 +87,7 @@ const routes: RouteConfig[] = [
     component: lazy(() => import("../pages/order/order-detail")),
     breadcrumb: [
       { title: "订单" },
-      { title: "订单管理", to: "/order/manager" },
+      { title: "所有订单", to: "/order/all" },
       { title: "编辑订单" }
     ],
     permission: ['小二']

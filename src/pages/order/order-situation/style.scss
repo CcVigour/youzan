@@ -1,0 +1,84 @@
+.ordersituation{
+    width: 100%;
+ .order-type{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   background: #F3F3F3;
+   padding: 36px 50px;
+  .type-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tit{
+      color: rgba(80, 80, 80, 1);
+    }
+    .num{
+      font-size: 22px;
+      color: rgba(60, 142, 234, 1);
+      font-weight: bold;
+    }
+  }
+ }
+ .seven{
+   width: 100%;
+   height: 50px;
+   background: #F3F3F3;
+   line-height: 50px;
+   margin: 30px 0;
+   padding: 0 20px 0 22px;
+   display: flex;
+   justify-content: space-between;
+  .lef{
+    display: flex;
+    justify-content: space-between;
+    .liu{
+      position: relative;
+      span{
+        position: absolute;
+        top: 14px;
+        right: 83px;
+        display: inline-block;
+        width: 3px;
+        height: 20px;
+        background:rgba(255, 87, 51, 1);
+      }
+    }
+  } 
+  .litter{
+    color: rgba(42, 130, 228, 1);
+    margin-left: 30px;
+  }  
+ }
+ .order-con{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .com-num{
+    width: 25%;
+    height: 199px;
+    background: rgba(243, 243, 243, 1);
+    padding: 35px 50px 24px;
+    box-sizing: border-box;
+    .num-item{
+      height: 83px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .item-tit{
+
+      }
+      .item-num{
+        color: rgba(60, 142, 234, 1);
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+  }
+  .com-chart{
+    width: 75%;
+    height: 199px;
+    border: 1px solid rgba(243, 243, 243, 1);
+  }
+ }
+}
