@@ -3,7 +3,7 @@ import React, { useState,useCallback,useMemo,memo } from 'react'
 import { useSelector } from 'react-redux'
 import './index.scss'
 
-import immutable from 'immutable'
+// import immutable from 'immutable'
 
 import Yxq from './yxq'
 
@@ -44,12 +44,9 @@ const VipAdd: React.FC<{}> = memo( function VipAdd() {
     }else if(state.yxq === 2){
         setTime(' ' + state.day + ' 天')
     }else if(state.yxq === 3){
-        // if(state.date){
           setTime(state.d[0]  + ' 至 ' + state.d[1]);
-        // }
     }
   },[state])
-  console.log(state);
   
   return (
     <div className="vipAdd">
