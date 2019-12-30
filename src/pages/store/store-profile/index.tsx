@@ -118,7 +118,7 @@ function getEchartsOptions(data: any) {
       },
       series: yData
     };
-    console.log(options);
+    // console.log(options);
     return options;
   }
 }
@@ -216,7 +216,7 @@ const StoreProfile: React.FC<{}> = function StoreProfile() {
   const userData = useSelector(state =>
     (state as any).getIn(["storePages", "store"])
   );
-  console.log(userData.get("data").toJS());
+  // console.log(userData.get("data").toJS());
 
   // 首屏的数据
   useEffect(() => {

@@ -61,7 +61,7 @@ export const requestOrderData = ()=>(dispatch:Dispatch)=>{
 
   ajax.get(API.ORDER_LIST)
   .then(({data})=>{
-    console.log(data.data);
+    // console.log(data.data);
     const action = setOrderData(SetOrderDataType.success,data.data);
     dispatch(action)
   })

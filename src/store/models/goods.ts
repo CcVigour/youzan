@@ -21,7 +21,7 @@ type Action = ReturnType<typeof setGoodsListData>;
 // 异步action
 export const requestGoodsListData = ()=>async (dispatch:Dispatch)=>{
     let result = await ajax.get(API.GOODS_LIST);
-    console.log(result);
+    // console.log(result);
     let action = setGoodsListData('setGoodsList',result.data.data);
     dispatch(action);
 }

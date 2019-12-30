@@ -59,7 +59,7 @@ const Classify: React.FC<Prop> = function Classify({status}){
       </div>
       <div className="three">
         <div className="name">
-          商品名称：<Input placeholder="请输入" style={{ width: '74%' }} />
+          商品名称：<Input placeholder="请输入" style={{ width: '70%' }} />
         </div>
         <div className="type">
           订单类型：

@@ -1,4 +1,4 @@
-import React,{useRef,useEffect,useCallback,memo,useMemo} from 'react'
+import React,{useEffect,useCallback,useMemo} from 'react'
 import {useDispatch,useSelector} from 'react-redux'
 import {requestOrderData} from '../../../store/models/order'
 import {Link} from 'react-router-dom'
@@ -112,7 +112,6 @@ const OrderAll: React.FC<{}> = function OrderAll(){
     {status:"已发货", key:"sended"},
     {status:"已收货", key:"receive"},
     {status:"已完成", key:"finish"},
-
   ]
   const status = useCallback((key) => {
     console.log(key);

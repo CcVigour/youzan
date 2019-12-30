@@ -29,7 +29,7 @@ const TableSelector:React.FC<{onFocus:(value:Object)=>void,}> = function TableSe
         NewData.push(obj);
     })
 
-    console.log(NewData);
+    // console.log(NewData);
     
 
     const columns = [

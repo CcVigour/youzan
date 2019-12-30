@@ -5,12 +5,15 @@ import root from './models/root'
 import order from './models/order'
 import storePages from './models/storePages'
 import goods from './models/goods'
+import customer from './models/customer'
+
 
 const reducer = combineReducers({
   root,
   order,
   storePages,
-  goods
+  goods,
+  customer
 })
 
 

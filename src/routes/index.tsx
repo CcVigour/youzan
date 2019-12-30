@@ -95,24 +95,38 @@ const routes: RouteConfig[] = [
   },
   {
     path: "/customer/manager",
-    component: lazy(() => import("../pages/customer/customer-manager")),
+    component: lazy(() => import("../pages/customer/customerManager")),
     breadcrumb: [{ title: "客户" }, { title: "客户管理" }],
     permission: ['小二']
 
   },
   {
     path: "/customer/operat",
-    component: lazy(() => import("../pages/customer/customer-operat")),
+    component: lazy(() => import("../pages/customer/operat")),
     breadcrumb: [{ title: "客户" }, { title: "客户运营" }],
     permission: ['小二']
 
   },
   {
-    path: "/customer/add",
-    component: lazy(() => import("../pages/customer/customer-add")),
-    breadcrumb: [{ title: "客户" }, { title: "新增客户" }],
+    path: "/customer/vipcard",
+    component: lazy(() => import("../pages/customer/vipcard")),
+    breadcrumb: [{ title: "客户" }, { title: "会员卡" }],
     permission: ['小二']
-
+  },
+  {
+    path: "/customer/vip/:add",
+    component: lazy(() => import("../pages/customer/vipcard/children/vipAdd")),
+    breadcrumb: [
+      { title: "客户" }, 
+      { title: "会员管理" , to:'/customer/vipcard'},
+      {title:"新建会员"}],
+    permission: ['小二']
+  },
+  {
+    path: "/customer/vipManager",
+    component: lazy(() => import("../pages/customer/vipManager")),
+    breadcrumb: [{ title: "客户" }, { title: "会员管理" }],
+    permission: ['小二']
   },
   {
     path: "/amount/overview",

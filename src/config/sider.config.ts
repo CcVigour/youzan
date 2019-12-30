@@ -90,6 +90,11 @@ const SiderConfig: SiderConfigInterface[] = [
         title: "所有订单",
         path: "/order/all"
       },
+      {
+        id: "order-detail",
+        title: "订单详情",
+        path: "/order/detail/:id"
+      }
     ]
   },
   {
@@ -111,6 +116,16 @@ const SiderConfig: SiderConfigInterface[] = [
         id: "customer-add",
         title: "添加客户",
         path: "/customer/add"
+      },
+      {
+        id: "customer-vipcard",
+        title: "会员卡",
+        path: "/customer/vipcard"
+      },
+      {
+        id: "customer-vipManager",
+        title: "会员管理",
+        path: "/customer/vipManager"
       }
     ]
   },

@@ -1,0 +1,13 @@
+
+.addRecord{
+    .table{
+        margin-top:25px;
+    }
+    .ant-table-thead > tr > th,.ant-table-tbody > tr > td{
+        text-align: center;
+        em{
+            color: skyblue;
+            cursor: pointer;
+        }
+    }
+}

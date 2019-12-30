@@ -1,0 +1,57 @@
+.customerManager {
+    // padding:  0 100px;
+    .addBtn {
+        margin-right: 25px;
+    }
+
+    .selectList {
+        width: 100%;
+        padding: 10px 25px;
+        margin-top: 25px;
+        background-color: rgba(240, 240, 240, 1);
+
+        .select {
+            display: flex;
+            .selOne,
+            .selTwo,
+            .selThree {
+                width: 25%;
+                label {
+                    display: flex;
+                    margin: 10px;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    .ant-input,
+                    .ant-select {
+                        width: 50%;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .sel{
+            font-size:12px;
+            line-height: 12px;
+            padding: 2px 10px;
+            margin:8px 25px 8px 100px;
+        }
+        .clean{
+            font-size:12px;
+            color: blue;
+            padding: 3px 10px;
+            border: 1px solid skyblue;
+            border-radius: 5px;
+        }
+    }
+    .table{
+        margin-top:52px;
+    }
+    .ant-table-thead > tr > th,.ant-table-tbody > tr > td{
+        text-align: center;
+        em{
+            color: skyblue;
+            cursor: pointer;
+        }
+    }
+}
