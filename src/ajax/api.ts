@@ -3,10 +3,10 @@ enum API {
   // 登录接口
   // 参数： username  password
   LOGIN_API = "/api/manager/login",
-
-  
+ 
+ 
   // 店铺
-  STORE_API = "/api/store",
+  STORE_API = "/api/store/info",
   
   // 店铺设置
   STORE_EDIT = 'api/store/edit',
