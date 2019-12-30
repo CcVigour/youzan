@@ -1,0 +1,64 @@
+.operate-line{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    .issue-goods{
+        width: 74px;
+        height: 30px;
+        background: rgba(42, 130, 228, 1);
+        color: white;
+        line-height: 30px;
+        text-align: center;
+        font-size: 12px;
+        border-radius: 3px;
+        border: none;
+        outline: none;
+    }
+    .search{
+        display: flex;
+        .goods-type{
+            width: 88px;
+            height: 30px;
+            margin-right: 8px;
+            border-radius: 2px;
+            font-size: 12px;
+            border: 1px solid rgba(166, 166, 166, 1);
+            color:rgba(128, 128, 128, 1);
+        }
+        .search-btn{
+            width: 94px;
+            height: 30px;
+            text-indent: 20px;
+            color: rgba(51, 51, 51, 1);
+            border-radius: 2px;
+            font-size: 12px;
+            border: rgba(153, 153, 153, 1) solid 1px;
+        }
+    }
+}
+.operate-goods{
+    width: 100%;
+    height:30px;
+    margin-top: 10px;
+    display: flex;
+    border-top: 2px solid rgba(229, 229, 229, 1);
+    .delete,.edit,.changegroup{
+        height: 30px;
+        color: rgba(80, 80, 80, 1);
+        background-color: rgba(255, 255, 255, 1);
+        font-size: 12px;
+        line-height: 30px;
+        border: rgba(166, 166, 166, 1) solid 1px;
+        text-align: center;
+        margin-top: 5px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+    .delete,.edit{
+        width: 41px;
+    }
+    .changegroup{
+        width: 52px;
+    }
+}

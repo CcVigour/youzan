@@ -2,20 +2,15 @@ import { createStore,compose,applyMiddleware } from "redux";
 import {combineReducers} from 'redux-immutable'
 import thunk from 'redux-thunk'
 import root from './models/root'
-<<<<<<< HEAD
 import order from './models/order'
-
-const reducer = combineReducers({
-  root,
-  order
-=======
 import storePages from './models/storePages'
+import goods from './models/goods'
 
 const reducer = combineReducers({
   root,
-  storePages
-
->>>>>>> lxp
+  order,
+  storePages,
+  goods
 })
 
 
