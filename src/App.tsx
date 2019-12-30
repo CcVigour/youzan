@@ -9,9 +9,11 @@ import footLogo from "./assets/logov2.png";
 import Login from './pages/login';
 
 
+
 const LayOut: React.FC<{}> = function LayOut() {
   const role = useSelector(state=>(state as any).get('root').get('userInfo').get('role'));
   return (
+    
     <div className="app-container-wrap">
       {/* 侧栏 */}
       <AppSider />
@@ -22,7 +24,7 @@ const LayOut: React.FC<{}> = function LayOut() {
           {/* 懒加载 */}
           <Suspense fallback={<div>loading</div>}>
             {renderRoutes(routes,role)}
-           
+            
           </Suspense>
         </div>
         {/* 底部 */}

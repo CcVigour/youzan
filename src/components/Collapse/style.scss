@@ -1,0 +1,15 @@
+.app-collapse{
+    width: 100%;
+    .title{
+        background: #eee;
+        line-height: 38px;
+        font-size: 14px;
+        padding: 6px 20px;
+        position: relative;
+        &::before{ 
+          border-left: 2px red solid;
+          content: '';
+          padding: 0 10px 0 0;
+        }
+    }
+}
